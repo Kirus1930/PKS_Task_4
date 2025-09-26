@@ -48,6 +48,8 @@ class _MyHomePageState extends State<MyHomePage> {
               "Значение счетчика: $counter",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
+            SizedBox(height: 10),
+
             Row(
               children: [
                 ElevatedButton(
