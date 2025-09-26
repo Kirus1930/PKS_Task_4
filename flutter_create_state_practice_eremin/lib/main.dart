@@ -36,16 +36,26 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Практика 4')),
+      appBar: AppBar(
+        title: Text('Практика 4'),
+        centerTitle: true,
+        backgroundColor: Colors.deepOrangeAccent,
+      ),
       body: Center(
         child: Column(
           children: [
-            Text("Значение счетчика: $counter"),
+            Text(
+              "Значение счетчика: $counter",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             Row(
               children: [
                 ElevatedButton(
                   onPressed: () => counter -= 1,
                   onLongPress: () => counter -= 10,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.lightBlue,
+                  ),
                   child: Text("Сбросить"),
                 ),
                 GestureDetector(
@@ -54,6 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Container(
                     width: 20,
                     height: 20,
+                    color: Colors.lightGreen,
                     child: Text("Увеличить"),
                   ),
                 ),
