@@ -44,13 +44,13 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               children: [
                 ElevatedButton(
-                  onPressed: () => print(""),
-                  onLongPress: () => print(""),
+                  onPressed: () => counter -= 1,
+                  onLongPress: () => counter -= 10,
                   child: Text("Сбросить"),
                 ),
                 GestureDetector(
-                  onTap: () => print(""),
-                  onLongPress: () => print(""),
+                  onTap: increment,
+                  onLongPress: () => counter += 10,
                   child: Container(
                     width: 20,
                     height: 20,
