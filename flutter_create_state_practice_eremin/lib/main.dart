@@ -25,6 +25,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int counter = 0;
+
+  void increment() {
+    setState(() {
+      counter++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,16 +40,22 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           children: [
-            Text("Значение счетчика: $count"),
+            Text("Значение счетчика: $counter"),
             Row(
               children: [
                 ElevatedButton(
                   onPressed: () => print(""),
-                  child: Text("Уменьшить"),
+                  onLongPress: () => print(""),
+                  child: Text("Сбросить"),
                 ),
                 GestureDetector(
                   onTap: () => print(""),
                   onLongPress: () => print(""),
+                  child: Container(
+                    width: 20,
+                    height: 20,
+                    child: Text("Увеличить"),
+                  ),
                 ),
               ],
             ),
