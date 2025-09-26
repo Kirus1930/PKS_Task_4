@@ -28,15 +28,23 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Практика 4')
-      ),
+      appBar: AppBar(title: Text('Практика 4')),
       body: Center(
         child: Column(
           children: [
-            Text("Значение счетчика: $count")
-            Container(
-            )
+            Text("Значение счетчика: $count"),
+            Row(
+              children: [
+                ElevatedButton(
+                  onPressed: () => print(""),
+                  child: Text("Уменьшить"),
+                ),
+                GestureDetector(
+                  onTap: () => print(""),
+                  onLongPress: () => print(""),
+                ),
+              ],
+            ),
           ],
         ),
       ),
