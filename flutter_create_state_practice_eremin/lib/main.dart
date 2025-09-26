@@ -58,6 +58,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   child: Text("Сбросить"),
                 ),
+                SizedBox(height: 15),
+
                 GestureDetector(
                   onTap: increment,
                   onLongPress: () => counter += 10,
