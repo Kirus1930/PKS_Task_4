@@ -43,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               "Значение счетчика: $counter",
@@ -51,25 +52,33 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(height: 10),
 
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-                  onPressed: () => counter -= 1,
-                  onLongPress: () => counter -= 10,
+                  onPressed: () {
+                    setState(() {
+                      counter = 0;
+                    });
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.lightBlue,
                   ),
                   child: Text("Сбросить"),
                 ),
-                SizedBox(height: 15),
+                SizedBox(width: 15),
 
                 GestureDetector(
                   onTap: increment,
-                  onLongPress: () => counter += 10,
+                  onLongPress: () {
+                    setState(() {
+                      counter += 10;
+                    });
+                  },
                   child: Container(
-                    width: 20,
-                    height: 20,
+                    width: 100,
+                    height: 30,
                     color: Colors.lightGreen,
-                    child: Text("Увеличить"),
+                    child: Center(child: Text("Увеличить")),
                   ),
                 ),
               ],
