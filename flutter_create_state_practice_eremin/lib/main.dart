@@ -75,9 +75,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     });
                   },
                   child: Container(
-                    width: 100,
-                    height: 30,
-                    color: Colors.lightGreen,
+                    width: 110,
+                    height: 32,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                      color: Colors.lightGreen,
+                    ),
                     child: Center(child: Text("Увеличить")),
                   ),
                 ),
