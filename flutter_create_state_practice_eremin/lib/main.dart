@@ -37,7 +37,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Практика 4'),
+        title: Text(
+          'Практика 4',
+          style: TextStyle(fontStyle: FontStyle.italic),
+        ),
         centerTitle: true,
         backgroundColor: Colors.deepOrangeAccent,
       ),
